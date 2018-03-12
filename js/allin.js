@@ -61,7 +61,7 @@ jQuery(document).ready(function ($) {
   $('.version').append(version)
   addStyle() // add fonts
   loader = beloading({
-    trail: 'true',
+    trail: 'false',
     duration: 2,
     text: 'Online Wallpapers is loading ...'
   }, () => WManager = redditWallpapers({
@@ -69,11 +69,6 @@ jQuery(document).ready(function ($) {
     isFixed: 'true',
     overlay: 'rgba(0,0,0,0.8)'
   }))
-  WManager = redditWallpapers({
-    id: '.obit',
-    isFixed: 'true',
-    overlay: 'rgba(0,0,0,0.8)'
-  })
   if (localStorage.lock === undefined) localStorage.lock = 'No'
 })
 
