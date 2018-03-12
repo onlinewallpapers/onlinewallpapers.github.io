@@ -16,11 +16,6 @@ Today's lesson: CSS necessary evil.
 
  */
 
-// To fix fast load bug
-isLoaded = false
-jQuery(document).ready(function ($) {
-  window.addEventListener('load', function () { isLoaded = true })
-})
 
 const beloading = function beload (options,callback=() => {}) {
   const checkType = function checkType (type, args) {
@@ -54,6 +49,11 @@ const beloading = function beload (options,callback=() => {}) {
   }
 
   this.__init__ = function __init__ () {
+    document.onreadystatechange = () => {
+      if (document.readyState === 'complete') {
+        console.log('Is read FIRED')
+      }
+    }
     // validating types
     if (!checkType('string', [
       options.background,
@@ -69,13 +69,13 @@ const beloading = function beload (options,callback=() => {}) {
     this.loading()
     this.effectit()
     if (options.trail === 'false') {
-      if (isLoaded) {
-        this.stop(),
-        callback()
-      } else window.addEventListener('load', function () {
+      function toCall () {
+        console.log('got FIRED !')
         this.stop()
         callback()
-      })
+      }
+      if (document.readyState === "complete") toCall()
+      else $(window).on('load', toCall)
     }
   }
 
