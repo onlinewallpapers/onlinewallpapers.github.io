@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en,ar">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Language" content="en">
+  <meta http-equiv="Content-Language" content="ar">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" href="https://onlinewallpapers.github.io/" hreflang="en" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="css/theme.css" type="text/css">
+  <link rel="stylesheet" href="css/extra.css" type="text/css">
+  <title class='version'>Online Wallpapers - </title>
+  <meta name="keywords" content="Android app to manage and set online wallpaper automaticlly">
+  <link rel="icon"
+      type="image/png"
+      href="images/OnlineWallpapers.png">
+  <link href="https://fonts.googleapis.com/css?family=Changa|Lateef" rel="stylesheet">
+</head>
+
+<body class="text-center">
+  <nav class="navbar navbar-inverse navbar-expand-md navbar-dark bg-inverse obit" id="thev">
+    <div class="container">
+      <a class="navbar-brand" href="#cover">
+        <img src='images/OnlineWallpapers.png' width='15%' />
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" id="en2" href="#app">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="en24" href="#features">Download</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="en32" href="#based">Credit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="en23" href="#" data-toggle="modal" data-target="#mailus">Support</a>
+          </li>
+        </ul>
+        <a class="btn navbar-btn btn-secondary mx-2" data-toggle="tooltip" title="Lock or unlock navigation bar"
+           href="javascript:tlock();">
+          <span id="lockit" class="fa fa-1x fa-unlock"></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class="cover d-flex align-items-center pt-5 bg-inverse obit" id="cover">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 align-self-center">
+          <h1 class="text-white display-1">Online Wallpapers</h1>
+          <h4 class="text-white" id="en6">Simple wallpaper manager, based on reddit API. Live demo:</h4>
+          <div class="row mt-3 text-center">
+            <div class="col-md-12 col-12">
+              <form class='vertical-form'>
+                <div class='col-sm-12 fontA'>
+                  <label class="checkbox-inline" style='margin: 3%;'>
+                    <input type="checkbox" value="SkyPorn" checked>
+                    <br />
+                      Sky
+                  </label>
+                  <label class="checkbox-inline" style='margin: 3%;'>
+                    <input type="checkbox" value="EarthPorn" checked>
+                    <br />
+                      Earth
+                  </label>
+                  <label class="checkbox-inline" style='margin: 3%;'>
+                    <input type="checkbox" value="ExposurePorn">
+                    <br />
+                      Exposure
+                  </label>
+                  <label class="checkbox-inline" style='margin: 3%;'>
+                    <input type="checkbox" value="BridgePorn" checked>
+                    <br />
+                      Bridges
+                  </label>
+                  <label class="checkbox-inline" style='margin: 3%;'>
+                    <input type="checkbox" value="SpacePorn" checked>
+                    <br />
+                      Space
+                  </label>
+                  <label class="checkbox-inline" style='margin: 3%;'>
+                    <input type="checkbox" value="ImaginaryTechnology">
+                    <br />
+                      Imaginary
+                  </label>
+                </div>
+                <label style='font-size: 150%' for="FormControlSelect1">Select a duration :</label>
+                <select class="form-control text-center" id="FormControlSelect1">
+                  <option value='30000'>30 Seconds</option>
+                  <option value='60000'>1 Minute</option>
+                  <option value='120000'>2 Minutes</option>
+                  <option value='180000'>3 Minutes</option>
+                  <option value='300000'>5 Minutes</option>
+                </select>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+            <!--
+            <a href="#" data-target="#demo" data-toggle="modal"
+          --> <a href="#"
+            data-toggle="tooltip" title="Watch video demonstration">
+              <img class="mb-5 img-fluid d-block mx-auto lightit" width="70%" id="ilogo" src="images/phone.png" alt="Logo animation">
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="thanke" class="row hide pt-4">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6 snb bg-primary">
+      <button type="button" class="close h2" onclick="$('#thanke').fadeOut();">&times;</button>
+      <p class="h3 text-white" style='margin-top: 2%;margin-bottom: 3%;' id="en40">
+        Thanks for contacting us, will reply back as soon as possible
+      </p>
+    </div>
+  </div>
+  <div class="section py-5 text-md-left" id="app">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 push-md-5 my-3 align-self-center">
+          <h2 class="pb-3 pt-3 text-white bg-inverse my-3 text-center shb obit version" id="en7">Online Wallpapers</h2>
+          <p id="en8" class="lead" style='color: black'> 
+            A simple to use Android wallpaper manager, that utlizes the reddit API to fetch the latest wallpapers shared by the platform members,
+            And gives users the ability to choose from endless varity of wallpapers. Users are given a group of categories to select the type 
+            of wallpapers they want to be fetched to them. As well as
+            the abilty to browse through them before setting one. Also it has the ability to automaticlly set a new random wallpaper picked
+            from the chosen categories with given duration set by the user too.<br /> <br /> Nevertheless, This project is an open-source project 
+            and is based on open-source technologies ReactJS and React Native. This is the first beta release of the app, so bugs and errors 
+            are expected to occur frequently in this stage of development, So please do use it with that in mind.
+          </p>
+          <a href="visual_demo.html" target="_blank" class="btn btn-lg hide-btn obit shb" id="en9"><span class="fa fa-play"></span> Play Store</a>
+          <a href="#download" class="mt-1 btn btn-lg obit hide-btn shb" id="en10"><span class="fa fa-github"></span> Github </a>
+        </div>
+        <div class="col-md-5 pull-md-7 my-3">
+          <img id="guig" src="images/phone.png" style='width: 85%' class="img-fluid d-block mx-auto" alt="GUI animation">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section py-2" id="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <img 
+            src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'
+            width='40%'
+            class='navbar-brand'
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section py-5" id="based">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="pb-3 pt-3 text-white bg-inverse shb obit fontA" id="en15">Based On</h1>
+        </div>
+      </div>
+      <div class="row pt-3">
+        <div class='col-md-3 sect'>
+          <a target='_blank' href='https://github.com/facebook/react'>
+            <h3><span class='fa fa-github ficon'></span></h3>
+            <h3 class='fontA'>
+              React
+            </h3>
+            <p class='fontA'>
+                A declarative, efficient, and flexible JavaScript library for building user interfaces. 
+            </p>
+          </a>
+        </div>
+        <div class='col-md-1'></div>
+        <div class='col-md-3 sect'>
+            <a target='_blank' href='https://github.com/facebook/react-native'>
+              <h3><span class='fa fa-github ficon'></span></h3>
+              <h3 class='fontA'>
+                React-Native
+              </h3>
+              <p class='fontA'>
+                A framework for building native apps with React
+              </p>
+            </a>
+          </div>
+        <div class='col-md-1'></div>
+        <div class='col-md-3 sect'>
+            <a target='_blank' href='https://github.com/react-navigation/react-navigation'>
+              <h3><span class='fa fa-github ficon'></span></h3>
+              <h3 class='fontA'>
+                React-Navigation
+              </h3>
+              <p class='fontA'>
+                  Routing and navigation for your React Native apps
+              </p>
+            </a>
+        </div>
+      </div>
+      <div class="row pt-3">
+          <div class='col-md-3 sect'>
+            <a target='_blank' target='_blank' href='https://github.com/ocetnik/react-native-background-timer'>
+              <h3><span class='fa fa-github ficon'></span></h3>
+              <h3 class='fontA'>
+                  React-Native-Background-Timer
+              </h3>
+              <p class='fontA'>
+                  emit event periodically (even when app is in the background) 
+              </p>
+            </a>
+          </div>
+          <div class='col-md-1'></div>
+          <div class='col-md-3 sect'>
+              <a target='_blank' href='https://github.com/sconxu/react-native-checkbox'>
+                <h3><span class='fa fa-github ficon'></span></h3>
+                <h3 class='fontA'>
+                  React-Native-Checkbox
+                </h3>
+                <p class='fontA'>
+                    Checkbox component for React native
+                </p>
+              </a>
+            </div>
+          <div class='col-md-1'></div>
+          <div class='col-md-3 sect'>
+              <a target='_blank' href='https://github.com/uxman-sherwani/react-native-fa-icons'>
+                <h3><span class='fa fa-github ficon'></span></h3>
+                <h3 class='fontA'>
+                  React-Native-FA-Icons
+                </h3>
+                <p class='fontA'>
+                    Font Awesome Icons for React Native
+                </p>
+              </a>
+          </div>
+        </div>
+        <div class="row pt-3">
+          <div class='col-md-3 sect'>
+            <a target='_blank' href='https://github.com/joinspontaneous/react-native-loading-spinner-overlay'>
+              <h3><span class='fa fa-github ficon'></span></h3>
+              <h3 class='fontA'>
+                  React-Native-Overlay-Spinner
+              </h3>
+              <p class='fontA'>
+                  The only pure React Native, Native iOS and Android loading spinner (progress bar indicator) overlay 
+              </p>
+            </a>
+          </div>
+          <div class='col-md-1'></div>
+          <div class='col-md-3 sect'>
+              <a target='_blank' href='https://github.com/liuhong1happy/react-native-wallpaper-manager'>
+                <h3><span class='fa fa-github ficon'></span></h3>
+                <h3 class='fontA'>
+                  React-Native-Wallpaper-Manager
+                </h3>
+                <p class='fontA'>
+                    set Wallpaper with react-native 
+                </p>
+              </a>
+            </div>
+          <div class='col-md-1'></div>
+          <div class='col-md-3 sect'>
+              <a target='_blank' href='https://github.com/ElekenAgency/ReactNativeWheelPicker'>
+                <h3><span class='fa fa-github ficon'></span></h3>
+                <h3 class='fontA'>
+                    React-Native-Wheel-Picker-Android
+                </h3>
+                <p class='fontA'>
+                    A simple Wheel Picker for Android
+                </p>
+              </a>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="mt-5 py-5 obit" id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <p class="text-left lead" style='color: white'>&copy; Online Wallpapers - Since 2018 with love</p>
+        </div>
+        <div class="col-3 col-md-1 align-self-center">
+          <a href="https://www.youtube.com/channel/UC9_zci_JGr2hXBxziYbMMBw/videos" data-toggle="tooltip" title="Google play store" target="_blank">
+            <i class="fa fa-fw fa-play fa-3x hide-icn"></i></a>
+        </div>
+        <div class="col-3 col-md-1 align-self-center">
+          <a href="https://github.com/mrf345/fqm" data-toggle="tooltip" title="Github sourcecode" target="_blank">
+            <i class="fa fa-fw fa-github-square fa-3x hide-icn"></i></a>
+        </div>
+        <div class="col-3 col-md-1 align-self-center">
+          <a class="mlink" href="#" data-toggle="modal" data-target="#mailus" data-toggle="tooltip" title="Contact us for support and bug reporting">
+            <i class="fa fa-fw fa-envelope fa-3x hide-icn"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="mailus">
+    <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+          <p class="modal-title text-center h3"> Contact us </p>
+		      <button type="button" class="close" data-dismiss="modal">&times;</button>
+	       </div>
+         <form class="form-horizontal text-center" method="POST" id="femail">
+	      <div class="modal-body">
+          <br />
+          <input type="text" name="name" class="form-control text-center" placeholder="Enter your name">
+          <br />
+            <input type="email" name="email" class="form-control text-center" placeholder="Enter email">
+          <br />
+            <textarea class="form-control" name="comment" rows="5" id="comment" placeholder="Enter your message .."></textarea>
+          <br />
+          <input type="hidden" name="_subject" value="FQM 0.2 emails" />
+          <input type="text" name="_gotcha" style="display:none" />
+          <input type="hidden" name="_next" value="//fqms.github.io/#thanke" />
+	      </div>
+	      <div class="modal-footer">
+		      <button type="submit" class="close btn-danger">Send</button>
+	      </div>
+        </form>
+    </div>
+  </div>
+</div>
+</div>
+  <div class="modal fade" id="demo">
+    <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+          <p class="modal-title text-center h3"> Video demonstration </p>
+		      <button type="button" class="close" data-dismiss="modal">&times;</button>
+	       </div>
+	      <div class="modal-body">
+	      </div>
+	      <div class="modal-footer">
+		      <button type="button" class="close btn-warning pull-left" data-dismiss="modal">Close</button>
+	      </div>
+    </div>
+  </div>
+</div>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="js/bootstrap-4.0.0-alpha.6.min.js"></script>
+  <script src="js/smooth-scroll.js"></script>
+  <script src='js/jquery-ui.min.js'></script>
+  <script src="https://cdn.rawgit.com/mrf345/beloading/e2fe88b9/src/beloading.js"></script>
+  <script src="https://rawgit.com/mrf345/reddit-wallpapers/master/bin/bundle.js"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script src="js/allin.js"></script>
+</body>
+</html>
