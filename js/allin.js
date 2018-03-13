@@ -98,7 +98,5 @@ window.addEventListener('load', function () {
     WManager.options.duration = duration
     WManager.options.category = categories
     WManager.restart()
-    console.log('will restart')
-    // scroll effect stuff
   })
 })
