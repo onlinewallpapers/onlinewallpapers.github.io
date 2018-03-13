@@ -92,11 +92,11 @@ window.addEventListener('load', function () {
   $('form').on('change', function (e) {
     var categories = []
     $('form :checked').each((index, item) => {
-      categories.push(item.value)
+      if (item.localName === 'input') categories.push(item.value)
     })
     var duration = $('form select').val()
     WManager.options.duration = duration
-    WManager.options.categories = categories
+    WManager.options.category = categories
     WManager.restart()
     console.log('will restart')
     // scroll effect stuff
