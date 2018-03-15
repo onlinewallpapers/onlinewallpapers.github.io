@@ -64,11 +64,12 @@ jQuery(document).ready(function ($) {
     trail: 'false',
     duration: 2,
     text: 'Online Wallpapers is loading ...'
-  })
-  WManager = redditWallpapers({
-    id: '.obit',
-    isFixed: 'true',
-    overlay: 'rgba(0,0,0,0.8)'
+  }, () => {
+    WManager = redditWallpapers({
+      id: '.obit',
+      isFixed: 'true',
+      overlay: 'rgba(0,0,0,0.8)'
+    })
   })
   if (localStorage.lock === undefined) localStorage.lock = 'No'
 })
