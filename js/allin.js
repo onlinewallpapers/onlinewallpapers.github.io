@@ -68,8 +68,8 @@ jQuery(document).ready(function ($) {
     let toAdd = {
       id: '.obit',
       isFixed: 'true'
-    }
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) Object.assign(toAdd, {overlay: 'rgba(0,0,0,0.4)'})
+    } // adding different level of over for mobile and pc
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) Object.assign(toAdd, {overlay: 'rgba(0,0,0,0.6)'})
     else Object.assign(toAdd, {overlay: 'rgba(0,0,0,0.8)'})
     WManager = redditWallpapers(toAdd)
   })
