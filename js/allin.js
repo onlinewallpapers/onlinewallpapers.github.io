@@ -65,11 +65,13 @@ jQuery(document).ready(function ($) {
     duration: 2,
     text: 'Online Wallpapers is loading ...'
   }, () => {
-    WManager = redditWallpapers({
+    let toAdd = {
       id: '.obit',
-      isFixed: 'true',
-      overlay: 'rgba(0,0,0,0.8)'
-    })
+      isFixed: 'true'
+    }
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) Object.assign(toAdd, {overlay: 'rgba(0,0,0,0.4)'})
+    else Object.assign(toAdd, {overlay: 'rgba(0,0,0,0.8)'})
+    WManager = redditWallpapers(toAdd)
   })
   if (localStorage.lock === undefined) localStorage.lock = 'No'
 })
