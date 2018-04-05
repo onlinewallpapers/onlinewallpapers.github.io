@@ -46,7 +46,7 @@ span:hover, .dimit:hover {
   transition: all 0.4s ease-in-out;
 }
 
-.hide-btn:hover, .nav-link:hover {
+.hide-btn:hover, .hide-btn:active, .nav-link:hover {
   color: white !important;
   font-weight: bold;
   font-stretch: ultra-expanded;
