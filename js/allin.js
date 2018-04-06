@@ -67,6 +67,7 @@ jQuery(document).ready(function ($) {
   }, () => {
     let toAdd = {
       id: '.obit',
+      id_widthless: '.bl',
       isFixed: 'true'
     } // adding different level of over for mobile and pc
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) Object.assign(toAdd, {overlay: 'rgba(0,0,0,0.6)'})

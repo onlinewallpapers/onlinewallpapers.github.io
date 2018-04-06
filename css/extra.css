@@ -89,9 +89,18 @@ span:hover, .dimit:hover {
   transition: all 0.4s ease-in-out;
 }
 
+.play {
+  transition: all 0.4s ease-in-out;
+  width: 45%;
+  background-color: black;
+}
 .navbar-brand:hover {
   filter: brightness(1.8);
   transform: scale(1.1);
+}
+
+.play:hover {
+  filter: brightness(2.5);
 }
 
 .sect:hover {
