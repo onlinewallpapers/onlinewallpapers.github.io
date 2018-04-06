@@ -107,3 +107,7 @@ a:link {
   margin: 10%;
   border-radius: 5%;
 }
+
+#footer {
+    background-color: #000;
+}
